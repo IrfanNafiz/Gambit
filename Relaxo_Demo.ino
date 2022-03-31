@@ -1,12 +1,12 @@
- // for pin declaration
+// for pin declaration
 int sensor1 = 0;
 int sensor2 = 1;
 int sensor3 = 2;
 int sensor4 = 3;
 int sensor5 = 4;
 int sensor6 = 5;
-int sensor7 = 6;
-int sensor8 = 7;
+//int sensor7 = 6;
+//int sensor8 = 7;
 
 // for ir sensor values
 int s1 = 0;
@@ -15,8 +15,8 @@ int s3 = 0;
 int s4 = 0;
 int s5 = 0;
 int s6 = 0;
-int s7 = 0;
-int s8 = 0;
+//int s7 = 0;
+//int s8 = 0;
 
 //sonar array declaration
 int sonar1_trig = 0, sonar1_echo = 0; //top
@@ -25,33 +25,45 @@ int sonar3_trig = 0, sonar3_echo = 0; //center
 int sonar4_trig = 0, sonar4_echo = 0; //right
 
 //side sonar array values
-int sonarleft_trig = 0, sonarleft_echo 0;
-int sonarright_trig = 0, sonarright_echo = 0;
+int sonarleft_trig = 0;
+int sonarleft_echo = 0;
+int sonarright_trig = 0;
+int sonarright_echo = 0;
 
 //front sonar array values
 int son1 = 0;
 int son2 = 0;
 int son3 = 0;
-int son1 = 0;
+int son4 = 0;
 
 //side sonar array values
 int sonl = 0;
 int sonr = 0;
 
+int trigs[6];
+int echos[6];
+
 int threshold = 500;
 int data = 0;
+int flag = 0;
 
-int lme=12, lmf=11, lmb=10, rme=9, rmf=8, rmb=7;
+int lme=2, lmf=52, lmb=53, rme=3, rmf=50, rmb=51;
 
-int sonar_max =6; // maximum number of sonars available
+int sonar_max = 6; // maximum number of sonars available
 long duration; // variable for the duration of sound wave travel
-int distance[sonar_max]; // variable for the distance measurement
+int distance[6]; // variable for the distance measurement
+int d[6]; // array of variables for binary distance values
 int d_threshold = 10; //10cm distance threshold for initial judgment in sonarcalc
+int d_binary = 0;
 
 int BotRunning = 1;
 
+void TCRTSensorRead();
+void motorRun(int a , int b);
+void SonarSensorRead();
+
 void setup() {
-  Serial.begin(9600);
+  Serial.begin(115200);
   Serial.println("Initializing systems...");
 
   //ir array for lfr
@@ -82,7 +94,6 @@ void setup() {
 
   int trigs[6] = {sonar1_trig, sonar2_trig, sonar3_trig, sonar4_trig, sonarleft_trig, sonarright_trig};
   int echos[6] = {sonar1_echo, sonar2_echo, sonar3_echo, sonar4_echo, sonarleft_echo, sonarright_echo};
-  int 
 
   pinMode(lme, OUTPUT);
   pinMode(lmf, OUTPUT);
@@ -141,23 +152,23 @@ void loop() {
       
       //d[0] distance from top sonar is near, always avoid
       if (d[0] == 0){
-        u_turn();
+//        u_turn();
       }
 
       if (d_binary == 0b0100) {
-        turn_left() //*till 0010 or else continue/uturn
+//        turn_left() //*till 0010 or else continue/uturn
       }
 
       if (d_binary == 0b0001) {
-        turn right() //*till 0010 or else continue/uturn
+//        turn right() //*till 0010 or else continue/uturn
       }
       
       if (d_binary == 0b0110) {
-        turn left() //*till 0010 or else continue/uturn
+//        turn left() //*till 0010 or else continue/uturn
       }
 
       if (d_binary == 0b0011) {
-        turn right() //*till 0010 or else continue/uturn
+//        turn right() //*till 0010 or else continue/uturn
       }
          
   }

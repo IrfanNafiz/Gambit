@@ -17,6 +17,7 @@ void motorRun(int a , int b) {
     digitalWrite(rmf, 0);
     digitalWrite(rmb, 1);
   }
-  analogWrite(enL, a);
-  analogWrite(enR, b);
+  
+  analogWrite(lme, a);
+  analogWrite(rme, b);
 }

@@ -1,6 +1,4 @@
-void TCRTSensorRead() 
-{
-  s[]
+ void TCRTSensorRead() {
   s1 = analogRead(sensor1);
   s2 = analogRead(sensor2);
   s3 = analogRead(sensor3);
@@ -81,7 +79,6 @@ void TCRTSensorRead()
 //  {
 //    s8 = 1;
     
-  } 
   
 //  data = s1*108 + s2*64 + s3*32 + s4*16 + s5*8 + s6*4 + s7*2 + s8*1; //8 sensors
   data = s1*32 + s2*16 + s3*8 + s4*4 + s5*2 + s6*1; //6 sensors
