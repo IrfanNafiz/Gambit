@@ -1,11 +1,31 @@
 #include <ServoEasing.h>
 
-#define START_DEGREE_VALUE  0 // The degree value written to the servo at time of attach.
+#include <Arduino.h>
+
+// Must specify this before the include of "ServoEasing.hpp"
+//#define USE_PCA9685_SERVO_EXPANDER // Activate this to enables the use of the PCA9685 I2C expander chip/board.
+//#define USE_SERVO_LIB // Activate this to force additional using of regular servo library.
+//#define PROVIDE_ONLY_LINEAR_MOVEMENT // Activate this to disable all but LINEAR movement. Saves up to 1540 bytes program memory.
+#define DISABLE_COMPLEX_FUNCTIONS // Activate this to disable the SINE, CIRCULAR, BACK, ELASTIC and BOUNCE easings. Saves up to 1850 bytes program memory.
+#define MAX_EASING_SERVOS 1
+#define ENABLE_MICROS_AS_DEGREE_PARAMETER // Activate this to enable also microsecond values as (target angle) parameter. Requires additional 128 bytes program memory.
+//#define DEBUG // Activate this to generate lots of lovely debug output for this library.
+
+//#define PRINT_FOR_SERIAL_PLOTTER // Activate this to generate the Arduino plotter output.
+
+#include "ServoEasing.hpp"
+#define INFO // to see serial output of loop
 
 ServoEasing servobot;
 ServoEasing servoarm1;
 ServoEasing servoarm2;
 ServoEasing servoclaw;
+
+#define START_DEGREE_VALUE  0 // The degree value written to the servo at time of attach.
+
+//for BTModule
+#include <SoftwareSerial.h>
+SoftwareSerial mySerial(0, 1); // RX, TX
 
 // for pin declaration
 int sensor1 = 0;
@@ -85,23 +105,28 @@ int d_binary = 0;
 void TCRTSensorRead();
 void motorRun(int a , int b);
 void SonarSensorRead();
+void irCheck();
+void com_BT();
+void init_BT();
 
 //CONTROL BOARD
 int BotRunning = 1;
-int IRCheck = 1;
+int IRPower = 1;
+int IRCheck = 0;
 int motorPower = 0;
 int servoPower = 1;
 int flag = 0; //0 for lfr, 1 for auto clean, 2 for manual clean
 
 void setup() {
+  init_BT();
   Serial.begin(9600);
   Serial.println("Initializing systems...");
 
   //init servos for arm (pwm)
-  servobot.attach(4);
-  servoarm1.attach(5);
-  servoarm2.attach(6);
-  servoclaw.attach(7);
+//  servobot.attach(4);
+//  servoarm1.attach(5);
+//  servoarm2.attach(6);
+//  servoclaw.attach(7);
 
   //ir array for lfr
   pinMode(sensor1, INPUT);
@@ -147,7 +172,11 @@ void setup() {
 void loop() {
   while (BotRunning == 1) {
     while (flag==0) { //lfr-mode
-      TCRTSensorRead();
+      if (IRPower == 1) {
+        TCRTSensorRead();
+      }
+
+      com_BT();
 
       if (servoPower == 1) {
         servobot.easeTo(0);
@@ -157,42 +186,8 @@ void loop() {
 
       //ircheck
       if (IRCheck = 1) {
-//        Serial.print("Analog: ");
-//        Serial.print(analogRead(sensor1));
-//        Serial.print(" ");
-//        Serial.print(analogRead(sensor2));
-//        Serial.print(" ");
-//        Serial.print(analogRead(sensor3));
-//        Serial.print(" ");
-//        Serial.print(analogRead(sensor4));
-//        Serial.print(" ");
-//        Serial.print(analogRead(sensor5));
-//        Serial.print(" ");
-//        Serial.print(analogRead(sensor6));
-//        Serial.print(" ");
-
-        Serial.print("BIN: ");
-        Serial.print(v1);
-        Serial.print(" ");
-        Serial.print(v2);
-        Serial.print(" ");
-        Serial.print(v3);
-        Serial.print(" ");
-        Serial.print(v4);
-        Serial.print(" ");
-        Serial.print(v5);
-        Serial.print(" ");
-        Serial.print(v6);
-        Serial.print(" ");
-        
-        Serial.print("DATA: ");
-        Serial.print(sdata, BIN);
-        Serial.print(" ");
-
-      }
-
-//      Serial.println("Checking IR for motion.");
-//      Serial.println(data);
+        irCheck();
+        }
 
       if (motorPower == 1) {
         //WHITE
