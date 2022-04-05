@@ -8,8 +8,34 @@ void init_BT() {
 }
 
 void com_BT() {
-  int sensorData = 750;
-  mySerial.print("Sensor reading: ");
-  mySerial.println(sensorData);
+  mySerial.print("Sonar: ");
+  mySerial.println(distance);
 
+  mySerial.print("Analog: ");
+  mySerial.print(s1);
+  mySerial.print(" ");
+  mySerial.print(s2);
+  mySerial.print(" ");
+  mySerial.print(s3);
+  mySerial.print(" ");
+  mySerial.print(s4);
+  mySerial.print(" ");
+  mySerial.print(s5);
+  mySerial.print(" ");
+  mySerial.print(s6);
+  mySerial.print(" ");
+
+  mySerial.print("BIN: ");
+  mySerial.print(v1);
+  mySerial.print(" ");
+  mySerial.print(v2);
+  mySerial.print(" ");
+  mySerial.print(v3);
+  mySerial.print(" ");
+  mySerial.print(v4);
+  mySerial.print(" ");
+  mySerial.print(v5);
+  mySerial.print(" ");
+  mySerial.print(v6);
+  mySerial.print(" ");
 } 

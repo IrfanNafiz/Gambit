@@ -1,4 +1,26 @@
-//void SonarSensorRead() {
+void SonarSensorRead() {
+    // Clears the trigPin condition
+    digitalWrite(sonar1_trig, LOW);
+    delayMicroseconds(2);
+    
+    // Sets the trigPin HIGH (ACTIVE) for 10 microseconds
+    digitalWrite(sonar1_trig, HIGH);
+    delayMicroseconds(10);
+    digitalWrite(sonar1_trig, LOW);
+    
+    // Reads the echoPin, returns the sound wave travel time in microseconds
+    duration = pulseIn(sonar1_echo, HIGH);
+    
+    // Calculating the distance
+    distance = duration * 0.034 / 2; // Speed of sound wave divided by 2 (go and back)
+
+    //convert distance[i] to 1s and 0s, 0 means object close, 1 means object far
+//    for (int i = 0; i<sonar_max; i++) {
+//      if (distance[i] <= d_threshold)  {d[i] = 0;}
+}
+
+
+//BACKUP
 //  for (int i=0; i<sonar_max; i++) {
 //    // Clears the trigPin condition
 //    digitalWrite(trigs[i], LOW);

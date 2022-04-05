@@ -19,5 +19,5 @@ void motorRun(int a, int b){
   }
   analogWrite(rme,a);
   analogWrite(lme,b);
-//  delay(15);
+//  delay(25);
 }
