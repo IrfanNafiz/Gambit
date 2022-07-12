@@ -7,7 +7,7 @@ Retrieval Purposes.
 ## Team Members:
 Irfan Nafiz (EEE'19)\
 Arnob Paul (EEE'19)\
-Md Baktiar Alam Kabir (EEE'19)
+Md Baktiar Alam Kabir (ME'19)
 
 ### Overview:
 Gambit is a multipurpose line follower robot, combined with wireless communication and a 2 degree of freedom robotic arm, capable of following a line with ease. Furthermore it has the capability of detecting objects in its way, which it can remove or hold with the arm according to given instructions.
