@@ -19,20 +19,21 @@ The main purpose of Gambit is to remove obstacles and carry it with the help of 
 Practically, it has the ability to conduct industrial work, cleaning roads and small object rescue operations from dangerous or hard to reach places.
 Gambit was also a chance for us to hone our skills in creating an LFR, so we took the liberty to add as many features as we could to enhance our LFR.
 
-| Parts List (with price) | Number of parts | Name of parts | Price |
-| --- | --- | --- | --- |
-| 01 | Arduino Mega (1) | --- | --- |
-| 02 | IR Sensor Array (6) | --- | --- |
-| 03 | Ultrasonic Sonar Sensor (1) | --- | --- |
-| 04 | Servo (4) [3 high torque + *1 low torque] | --- | --- |
-| 05 | 5V Small DC motor (2) | --- | --- |
-| 06 | *Popsicle Sticks (~10) | --- | --- |
+### Parts List (with price): 
+| Number of parts | Name of parts | Price |
+| --- | --- | --- |
+| 01 | Arduino Mega (1) | --- |
+| 02 | IR Sensor Array (6) | --- |
+| 03 | Ultrasonic Sonar Sensor (1) | --- |
+| 04 | Servo (4) [3 high torque + *1 low torque] | --- |
+| 05 | 5V Small DC motor (2) | --- |
+| 06 | *Popsicle Sticks (~10) | --- |
 | 07 | *PVC Board | --- | --- |
-| 08 | Jumper Wire Bundle (x1) | --- | --- |
-| 09 | 7.4V Battery | --- | --- |
-| 10 | Motor Driver | --- | --- |
-| 11 | Wheels | --- | --- |
-| 12 | *BT Module | --- | --- |
+| 08 | Jumper Wire Bundle (x1) | --- |
+| 09 | 7.4V Battery | --- | 
+| 10 | Motor Driver | --- | 
+| 11 | Wheels | --- |
+| 12 | *BT Module | --- | 
 | --- | Total | --- |
  
 
