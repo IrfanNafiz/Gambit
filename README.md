@@ -35,14 +35,12 @@ Gambit was also a chance for us to hone our skills in creating an LFR, so we too
 | 11 | Wheels | --- |
 | 12 | *BT Module | --- | 
 | --- | Total | --- |
- 
-
 *NOTE*: Only the ones marked in '*' are taken extra for the Project Hunt
+
 ### Construction:
 Gambit is divided into some major parts.
 1.   LFR: The base part of this bot consists of a few smaller parts including pvc board, Arduino Mega, DC motor, wheels,  6 array IR sensors, Sonar Sensor, Motor driver etc. PVC board is used for the main casing where other parts have been placed. DC motors are connected with the motor driver by wire. Under the pvc board, wheels are attached with the dc motors. IR sensors are linked in front of the board where the sensors face the ground. A microcontroller Arduino mega is placed on top of the board to control the whole structure by giving commands.
 2.   Robotic arm: The second main part of the bot is its arm which is made of a few servo motors and some sticks. All the motors are connected via jumper wires to the Arduino mega.
-Procedure:
 
 ### Circuit Schematic:
 *WORK IN PROGRESS*
