@@ -1,4 +1,4 @@
-# Gambit\
+# Gambit
 A User Friendly Line Follower Robot and RC Car with Detachable Robotic Arm for Cleaning and 
 Retrieval Purposes.
  
