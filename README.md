@@ -39,17 +39,13 @@ Gambit was also a chance for us to hone our skills in creating an LFR, so we too
 
 *NOTE*: Only the ones marked in '*' are taken extra for the Project Hunt
 ### Construction:
-Gambit is divided into two major parts.
+Gambit is divided into some major parts.
 1.   LFR: The base part of this bot consists of a few smaller parts including pvc board, Arduino Mega, DC motor, wheels,  6 array IR sensors, Sonar Sensor, Motor driver etc. PVC board is used for the main casing where other parts have been placed. DC motors are connected with the motor driver by wire. Under the pvc board, wheels are attached with the dc motors. IR sensors are linked in front of the board where the sensors face the ground. A microcontroller Arduino mega is placed on top of the board to control the whole structure by giving commands.
- 
 2.   Robotic arm: The second main part of the bot is its arm which is made of a few servo motors and some sticks. All the motors are connected via jumper wires to the Arduino mega.
 Procedure:
-1.   Arduino Mega, brain of Gambit, provides the required instructions to the whole bot.
-2.   Battery, being heart of the bot, supplies power to the whole system.
-3.   IR sensor is used mainly for tracking line by detecting colors of light. These sensors send the information to Arduino. Gambit gets the information to track the line properly.
-4.   Getting the command from Arduino, Motor driver distributes voltage to the dc motors which eventually makes the wheels rotate.
-5.   Robotic arm is used for capturing objects and placing it to the side. The mechanical part of the arm works by the servo motors where it is instructed by the Arduino via inverse kinematics.
- 
+
+### Circuit Schematic:
+*WORK IN PROGRESS*
 
 ### Future Goals and Improvements:
 The prototype shows that it works as a line follower and obstacle remover. It can be used in different sectors. From natural disasters to industrial work, it can be used to move anything from one place to another. As all machines, it has some limitations too. In future, it should be able to identify details of the object using artificial intelligence and solve some more complex problems.
