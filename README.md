@@ -45,6 +45,9 @@ Gambit is divided into some major parts.
 ### Circuit Schematic:
 *WORK IN PROGRESS*
 
+### Code
+Source code for Arduino Mega is included in the folder. 
+
 ### Future Goals and Improvements:
 The prototype shows that it works as a line follower and obstacle remover. It can be used in different sectors. From natural disasters to industrial work, it can be used to move anything from one place to another. As all machines, it has some limitations too. In future, it should be able to identify details of the object using artificial intelligence and solve some more complex problems.
 Some future goals are to make it a home assistant, where it will take instructions via BT from a phone and carry out relevant activities - Cleaning, RC Car, LFR, Scouting, or even just telling you the time, humidity, temperature or reading recent news headlines.
