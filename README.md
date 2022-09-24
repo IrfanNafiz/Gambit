@@ -1,7 +1,7 @@
 # Gambit
 A User Friendly Line Follower Robot and RC Car with Detachable Robotic Arm for Cleaning and 
 Retrieval Purposes.
- 
+
 ## Team Name: Gamma (ϒ)
 
 ## Team Members:
@@ -9,6 +9,10 @@ Irfan Nafiz (EEE'19)\
 Arnob Paul (EEE'19)\
 Md Baktiar Alam Kabir (ME'19)
 
+## Achievement:
+Runner-Up of RoboSUST Senior Project Hunt 2022
+
+## Documentation:
 ### Overview:
 Gambit is a multipurpose line follower robot, combined with wireless communication and a 2 degree of freedom robotic arm, capable of following a line with ease. Furthermore it has the capability of detecting objects in its way, which it can remove or hold with the arm according to given instructions.
 
@@ -46,7 +50,7 @@ Gambit is divided into some major parts.
 *WORK IN PROGRESS*
 
 ### Code
-Source code for Arduino Mega is included in the folder. 
+Source code for Arduino Mega is included in the folder [src](/src/). 
 
 ### Future Goals and Improvements:
 The prototype shows that it works as a line follower and obstacle remover. It can be used in different sectors. From natural disasters to industrial work, it can be used to move anything from one place to another. As all machines, it has some limitations too. In future, it should be able to identify details of the object using artificial intelligence and solve some more complex problems.
