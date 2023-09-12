@@ -1,16 +1,24 @@
 # Gambit [Prototype]
-A User Friendly Line Follower Robot and RC Car with Detachable Robotic Arm for Cleaning and 
+A Prototype for a User Friendly Line Follower Robot and RC Car with Detachable Robotic Arm for Cleaning and 
 Retrieval Purposes.
+
+![image](https://github.com/IrfanNafiz/Gambit/assets/63298621/1d9551dd-4304-44ea-abd0-3baa70ebb5cf)
+![image](https://github.com/IrfanNafiz/Gambit/assets/63298621/e5c66531-f768-4783-905b-73430f12f53b)
+![garmbit arm](https://github.com/IrfanNafiz/Gambit/assets/63298621/bd38cb5f-46d6-4cd9-a5a4-24417c469cca)
+
 
 ## Team Name: Gamma (ϒ)
 
 ## Team Members:
-Irfan Nafiz (EEE'19)\
+Irfan Nafiz (EEE'19) ~ Team Lead \
 Arnob Paul (EEE'19)\
 Md Baktiar Alam Kabir (ME'19)
+Mirza Nihal Baig (CSE'18) ~ Team Mentor
 
 ## Achievement:
 Runner-Up of RoboSUST Senior Project Hunt 2022
+
+![image](https://github.com/IrfanNafiz/Gambit/assets/63298621/9e5e695d-2d92-4614-93c8-e0840409d080)
 
 ## Documentation:
 ### Overview:
@@ -55,3 +63,6 @@ Source code for Arduino Mega is included in the folder [src](/src/).
 ### Future Goals and Improvements:
 The prototype shows that it works as a line follower and obstacle remover. It can be used in different sectors. From natural disasters to industrial work, it can be used to move anything from one place to another. As all machines, it has some limitations too. In future, it should be able to identify details of the object using artificial intelligence and solve some more complex problems.
 Some future goals are to make it a home assistant, where it will take instructions via BT from a phone and carry out relevant activities - Cleaning, RC Car, LFR, Scouting, or even just telling you the time, humidity, temperature or reading recent news headlines.
+
+![gambit overall working](https://github.com/IrfanNafiz/Gambit/assets/63298621/a5d0f3ef-9653-4d72-b1c2-c7c25f3e6694)
+
