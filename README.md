@@ -3,7 +3,6 @@ A Prototype for a User Friendly Line Follower Robot and RC Car with Detachable R
 Retrieval Purposes.
 
 ![image](https://github.com/IrfanNafiz/Gambit/assets/63298621/1d9551dd-4304-44ea-abd0-3baa70ebb5cf)
-![image](https://github.com/IrfanNafiz/Gambit/assets/63298621/e5c66531-f768-4783-905b-73430f12f53b)
 ![garmbit arm](https://github.com/IrfanNafiz/Gambit/assets/63298621/bd38cb5f-46d6-4cd9-a5a4-24417c469cca)
 
 
