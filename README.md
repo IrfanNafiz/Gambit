@@ -11,7 +11,7 @@ Retrieval Purposes.
 ## Team Members:
 Irfan Nafiz (EEE'19) ~ Team Lead \
 Arnob Paul (EEE'19)\
-Md Baktiar Alam Kabir (ME'19)
+Md Baktiar Alam Kabir (ME'19)\
 Mirza Nihal Baig (CSE'18) ~ Team Mentor
 
 ## Achievement:
